@@ -22,7 +22,7 @@ namespace SourceMapInstaller
 			}
 			else
 			{
-				path = args[1];
+				path = args[0];
 			}
 
 			if (!FileIsMap(path))
@@ -41,7 +41,7 @@ namespace SourceMapInstaller
 			                  "Half-Life 2: Episode 1 [ep1]\n" +
 			                  "Half-Life 2: Episode 2 [ep2]\n" +
 			                  "Half-Life 1: Source [hl1s]\n" +
-			                  "Team Fortress 2 [tf2]" +
+			                  "Team Fortress 2 [tf2]\n" +
 			                  "Counter Strike: Source [css]\n" +
 			                  "Counter Strike: Global Offensive [csgo]\n" +
 			                  "Portal [portal]\n" +
@@ -53,7 +53,7 @@ namespace SourceMapInstaller
 			switch (chosenGame)
 			{
 				case "hl2":
-					if (!File.Exists(@"C:\Program Files (x86)\Steam\steamapps\common\Half-Life 2\hl2"))
+					if (!Directory.Exists(@"C:\Program Files (x86)\Steam\steamapps\common\Half-Life 2\hl2"))
 					{
 						Console.WriteLine("Sorry I was not able to find that game installed. Perhaps you have a non-steam version?");
 						Console.ReadKey();
@@ -64,7 +64,7 @@ namespace SourceMapInstaller
 					pathToLaunch = @"C:\Program Files (x86)\Steam\steamapps\common\Half-Life 2\hl2.exe -game hl2";
 					break;
 				case "ep1":
-					if (!File.Exists(@"C:\Program Files (x86)\Steam\steamapps\common\Half-Life 2\episodic"))
+					if (!Directory.Exists(@"C:\Program Files (x86)\Steam\steamapps\common\Half-Life 2\episodic"))
 					{
 						Console.WriteLine("Sorry I was not able to find that game installed. Perhaps you have a non-steam version?");
 						Console.ReadKey();
@@ -75,7 +75,7 @@ namespace SourceMapInstaller
 					pathToLaunch = @"C:\Program Files (x86)\Steam\steamapps\common\Half-Life 2\hl2.exe -game episodic";
 					break;
 				case "ep2":
-					if (!File.Exists(@"C:\Program Files (x86)\Steam\steamapps\common\Half-Life 2\ep2"))
+					if (!Directory.Exists(@"C:\Program Files (x86)\Steam\steamapps\common\Half-Life 2\ep2"))
 					{
 						Console.WriteLine("Sorry I was not able to find that game installed. Perhaps you have a non-steam version?");
 						Console.ReadKey();
@@ -86,7 +86,7 @@ namespace SourceMapInstaller
 					pathToLaunch = @"C:\Program Files (x86)\Steam\steamapps\common\Half-Life 2\hl2.exe -game ep2";
 					break;
 				case "hl1s":
-					if (!File.Exists(@"C:\Program Files (x86)\Steam\steamapps\common\Half-Life 2\hl1"))
+					if (!Directory.Exists(@"C:\Program Files (x86)\Steam\steamapps\common\Half-Life 2\hl1"))
 					{
 						Console.WriteLine("Sorry I was not able to find that game installed. Perhaps you have a non-steam version?");
 						Console.ReadKey();
@@ -97,7 +97,7 @@ namespace SourceMapInstaller
 					pathToLaunch = @"C:\Program Files (x86)\Steam\steamapps\common\Half-Life 2\hl2.exe -game hl1";
 					break;
 				case "tf2":
-					if (!File.Exists(@"C:\Program Files (x86)\Steam\steamapps\common\Team Fortress 2\tf"))
+					if (!Directory.Exists(@"C:\Program Files (x86)\Steam\steamapps\common\Team Fortress 2\tf"))
 					{
 						Console.WriteLine("Sorry I was not able to find that game installed. Perhaps you have a non-steam version?");
 						Console.ReadKey();
@@ -108,7 +108,7 @@ namespace SourceMapInstaller
 					pathToLaunch = @"C:\Program Files (x86)\Steam\steamapps\common\Team Fortress 2\hl2.exe -game tf";
 					break;
 				case "css":
-					if (!File.Exists(@"C:\Program Files (x86)\Steam\steamapps\common\counter-strike source\cstrike"))
+					if (!Directory.Exists(@"C:\Program Files (x86)\Steam\steamapps\common\counter-strike source\cstrike"))
 					{
 						Console.WriteLine("Sorry I was not able to find that game installed. Perhaps you have a non-steam version?");
 						Console.ReadKey();
@@ -119,7 +119,7 @@ namespace SourceMapInstaller
 					pathToLaunch = @"C:\Program Files (x86)\Steam\steamapps\common\counter-strike source\hl2.exe -game cstrike";
 					break;
 				case "csgo":
-					if (!File.Exists(@"C:\Program Files (x86)\Steam\steamapps\common\Counter-Strike Global Offensive\csgo"))
+					if (!Directory.Exists(@"C:\Program Files (x86)\Steam\steamapps\common\Counter-Strike Global Offensive\csgo"))
 					{
 						Console.WriteLine("Sorry I was not able to find that game installed. Perhaps you have a non-steam version?");
 						Console.ReadKey();
@@ -130,7 +130,7 @@ namespace SourceMapInstaller
 					pathToLaunch = @"C:\Program Files (x86)\Steam\steamapps\common\Counter-Strike Global Offensive\csgo.exe -game csgo";
 					break;
 				case "portal":
-					if (!File.Exists(@"C:\Program Files (x86)\Steam\steamapps\common\Portal\portal"))
+					if (!Directory.Exists(@"C:\Program Files (x86)\Steam\steamapps\common\Portal\portal"))
 					{
 						Console.WriteLine("Sorry I was not able to find that game installed. Perhaps you have a non-steam version?");
 						Console.ReadKey();
@@ -141,7 +141,7 @@ namespace SourceMapInstaller
 					pathToLaunch = @"C:\Program Files (x86)\Steam\steamapps\common\Portal\hl2.exe -game portal";
 					break;
 				case "portal2":
-					if (!File.Exists(@"C:\Program Files (x86)\Steam\steamapps\common\Portal 2\portal2"))
+					if (!Directory.Exists(@"C:\Program Files (x86)\Steam\steamapps\common\Portal 2\portal2"))
 					{
 						Console.WriteLine("Sorry I was not able to find that game installed. Perhaps you have a non-steam version?");
 						Console.ReadKey();
@@ -152,7 +152,7 @@ namespace SourceMapInstaller
 					pathToLaunch = @"C:\Program Files (x86)\Steam\steamapps\common\Portal 2\portal2.exe -game portal2";
 					break;
 				case "gmod":
-					if (!File.Exists(@"C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod"))
+					if (!Directory.Exists(@"C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod"))
 					{
 						Console.WriteLine("Sorry I was not able to find that game installed. Perhaps you have a non-steam version?");
 						Console.ReadKey();
